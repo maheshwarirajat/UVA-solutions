@@ -1,0 +1,40 @@
+/*    tommy_trash    */
+#include<bits/stdc++.h>
+
+#define repi(a,b,c) for(int i=a;i<b;i+=c)
+#define repj(a,b,c) for(int j=a;j<b;j+=c)
+#define ll long long
+#define PI acos(-1)
+#define EPS 1e-9
+#define GEOMETRY
+
+using namespace std;
+
+
+int main()
+{
+    #ifdef GEOMETRY_
+		freopen("input.txt", "r", stdin);
+		freopen("output.txt", "w", stdout);
+	#endif
+
+    double l,w,h,theta;
+
+    while(scanf("%lf %lf %lf %lf",&l,&w,&h, &theta)==4){
+
+       double hdash=l*tan(theta*PI/180);
+
+       if(hdash<=h)
+        {
+        printf("%.3f mL\n",(h-hdash/2)*l*w);
+        }
+        else
+        {
+            theta=90-theta;
+            printf("%.3f mL\n",w*h*h*tan(theta*PI/180)/2);
+        }
+    }
+
+    return 0;
+
+}
