@@ -1,0 +1,65 @@
+/*  chuckie   */
+#include <bits/stdc++.h>
+//#define CHUCKIE
+#define foreach(it,c) for(__typeof((c).begin()) it = (c).begin(); it!=(c).end(); it++)
+#define MAX 10000000
+
+using namespace std;
+
+
+
+int arr[258];
+
+int main()
+{
+	#ifdef CHUCKIE
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	#endif
+
+	int n;
+	cin>>n;
+
+	while(n--)
+	{
+		int k,val;
+		cin>>k;
+
+		for(int i=0;i<258;i++) arr[i]=0;
+
+		char a;
+		for(int i=0;i<k;i++)
+		{
+			cin>>a>>val;
+			arr[(int)a]=val;
+		}
+
+		int m;
+		cin>>m;
+
+		
+		long long cost=0;
+		string s;
+		cin.ignore();
+		for(int i=0;i<m;i++)
+		{
+			s.clear();
+			getline(cin,s);
+			int l=s.length();
+			for(int j=0;j<l;j++)
+			{
+				if(s[j]>=0 && s[j]<128)
+				cost+=1ll*arr[(int)s[j]];
+			}
+		}
+
+		cout<<fixed;
+		cout<<setprecision(2)<<cost*1.0/100;
+		cout<<'$'<<endl;
+
+
+	}
+
+
+	return 0;
+}
