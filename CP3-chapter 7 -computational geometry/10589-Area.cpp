@@ -7,6 +7,7 @@
 #define PI acos(-1)
 #define EPS 1e-9
 #define GEOMETRY
+#define chuckie 
 
 
 using namespace std;
