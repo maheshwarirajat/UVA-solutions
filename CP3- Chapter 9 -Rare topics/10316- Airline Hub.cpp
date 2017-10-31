@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <map>
+#incldue<conio.h>
 #include <iostream>
 #include <algorithm>
 #define PI acos(-1)
