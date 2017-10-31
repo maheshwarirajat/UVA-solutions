@@ -9,8 +9,7 @@
 
 #define clong(d) scanf("%lld", &d)
 #define clong2(a, b) scanf("%lld %lld", &a, &b)
-#define clong3(a, b, c) scanf("%lld %lld %lld", &a, &b, &c)
-#define clong4(a, b, c, d) scanf("%lld %lld %lld %lld", &a, &b, &c, &d)
+
 
 const int MOD = 1000000007;
 #define MODSET(d) if ((d) >= MOD) d %= MOD;
